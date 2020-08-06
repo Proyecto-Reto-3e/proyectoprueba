@@ -8,8 +8,9 @@ html_base="""
             <l1>    <a href="/">Portada</a>   </l1>
             <l1>     <a href="/about-me/">Acerca de </a>  </l1>
             <l1>     <a href="/contact/">Contacto</a>   </l1>
-            <l1>    <a href="/">Servicio/">Servicio</a>   </l1>
-            <l1>    <a href="/">index/">index</a>   </l1>
+            <l1>     <a href="/portfolio/">Portafolio</a>   </l1>
+          
+            
             
      </ul>
 """
@@ -32,15 +33,17 @@ def contact(request):
     html_responsde= html_base + html_responsde
     return HttpResponse(html_responsde);
 
-def Servicio(request):
-    html_responsde="<h1>la paguina de servicio</h1>"
+
+def portfolio(request):
+    html_responsde="<h1>la paguina de portfolio</h1>"
     html_responsde= html_base + html_responsde
     return HttpResponse(html_responsde);
 
-def index(request):
-    html_responsde="<h1>la paguina de index</h1>"
-    html_responsde= html_base + html_responsde
-    return HttpResponse(html_responsde);
+
+
+
+
+
 
 
 
@@ -54,10 +57,16 @@ def about(request,plantilla="about.html"):
 def contact(request,plantilla="contact.html"):
     return render(request,plantilla)
 
-def Servicio(request,plantilla="Servicio.html"):
+def portfolio(request,plantilla="portfolio.html"):
     return render(request,plantilla)
 
-def index(request,plantilla="index.html"):
-    return render(request,plantilla)
+
+
+
+
+
+
+
+
 
 
